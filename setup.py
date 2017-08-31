@@ -49,7 +49,7 @@ class PublishCommand(Command):
     """Support setup.py publish."""
 
     description = 'Build and publish the package.'
-    user_options = []
+    user_options = []  # type: List
 
     @staticmethod
     def status(s):
