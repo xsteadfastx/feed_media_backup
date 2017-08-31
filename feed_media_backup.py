@@ -96,7 +96,7 @@ def download(url: str, dest: str) -> bool:
 )
 @click.version_option()
 def main(feed: str, dest: str, force: bool, verbose: bool) -> None:
-    """User interface."""
+    """Backups media from blog RSS feeds."""
     # set log level
     if verbose:
         logzero.loglevel(logging.DEBUG)
