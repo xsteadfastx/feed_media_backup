@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>xsteadfastx</title><link href="http://xsteadfastx.org/" rel="alternate"></link><link href="http://xsteadfastx.org/feed/index.html" rel="self"></link><id>http://xsteadfastx.org/</id><updated>2017-08-04T11:45:00+02:00</updated><entry><title>Die Jawbreaker Dokumentation "Dont break down"</title><link href="http://xsteadfastx.org/2017/07/13/die-jawbreaker-dokumentation-dont-break-down/" rel="alternate"></link><published>2017-07-13T11:02:00+02:00</published><updated>2017-07-13T11:02:00+02:00</updated><author><name>marvin</name></author><id>tag:xsteadfastx.org,2017-07-13:/2017/07/13/die-jawbreaker-dokumentation-dont-break-down/</id><summary type="html">&lt;p&gt;&lt;img alt="dont break down" src="http://xsteadfastx.org/images/jawbreaker-dont-break-down.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Es kommt wohl bald eine Dokumentation zu Jawbreaker. Eine Band die ich immer wieder und sehr gerne hÃ¶re. Sie spielen ja bald ein paar Reunion Shows. Na mal schauen...&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;iframe
+                    src="//player.vimeo.com/video/223189941?title=0&amp;amp;byline=0&amp;amp;portrait=0"
+                    width="640" height="390" frameborder="0"
+                    webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+                &lt;/iframe&gt;
+            &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(&lt;a href="http://pitchfork.com/news/jawbreaker-documentary-dont-break-down-gets-new-trailer-premiere-date-watch/"&gt;via&lt;/a&gt;)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="dont break down" src="http://xsteadfastx.org/images/jawbreaker-dont-break-down.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Es kommt wohl bald eine Dokumentation zu Jawbreaker. Eine Band die ich immer wieder und sehr gerne hÃ¶re. Sie spielen ja bald ein paar Reunion Shows. Na mal schauen...&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;iframe
+                    src="//player.vimeo.com/video/223189941?title=0&amp;amp;byline=0&amp;amp;portrait=0"
+                    width="640" height="390" frameborder="0"
+                    webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+                &lt;/iframe&gt;
+            &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(&lt;a href="http://pitchfork.com/news/jawbreaker-documentary-dont-break-down-gets-new-trailer-premiere-date-watch/"&gt;via&lt;/a&gt;)&lt;/p&gt;</content><category term="music"></category><category term="documentary"></category><category term="jawbreaker"></category></entry></feed>

@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+tinydb = "*"
+beautifulsoup4 = "*"
+click = "*"
+feedparser = "*"
+logzero = "*"
+lxml = "*"
+typing = "*"
+youtube_dl = "*"
+
+[dev-packages]
+flake8 = "*"
+flake8-import-order = "*"
+mypy = "*"
+pylint = "*"
+pytest = "*"
+pypandoc = "*"
+twine = "*"
+pytest-cov = "*"
+codecov = "*"
+tox = "*"
