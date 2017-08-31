@@ -10,7 +10,7 @@ from setuptools import Command, setup
 NAME = 'feed_media_backup'
 DESCRIPTION = 'Backups media from blog RSS feeds.'
 URL = 'https://github.com/xsteadfastx/feed_media_backup'
-EMAIL = 'marvin@xsteadfastx'
+EMAIL = 'marvin@xsteadfastx.org'
 AUTHOR = 'Marvin Steadfast'
 
 
