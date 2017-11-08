@@ -1,0 +1,12 @@
+FROM xsteadfastx/tox-python
+
+RUN set -ex \
+ && pip install pex \
+ && apt-get update \
+ && apt-get install -y \
+        libxml2-dev \
+        libxslt-dev
+
+WORKDIR /data
+
+CMD pex -e feed_media_backup.cli:main --python=python3.6 --python=python3.5 --python=python3.4 --python-shebang=/usr/bin/python3 -o dist/feed_media_backup.pex --no-wheel --disable-cache -v .

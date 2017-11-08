@@ -1,11 +1,14 @@
 """feed_media_backup."""
+
+# pylint: disable=missing-docstring
+
 import ast
 import os
 import re
 import sys
 from shutil import rmtree
-from setuptools import Command, setup
 
+from setuptools import Command, setup
 
 NAME = 'feed_media_backup'
 DESCRIPTION = 'Backups media from blog RSS feeds.'
@@ -27,7 +30,7 @@ REQUIRES = [
 
 # get version
 _version_re = re.compile(r'__version__\s+=\s+(.*)')
-with open('feed_media_backup.py', 'r') as f:
+with open('src/feed_media_backup/__init__.py', 'r') as f:
     VERSION = str(ast.literal_eval(_version_re.search(f.read()).group(1)))
 
 
@@ -49,7 +52,7 @@ class PublishCommand(Command):
     """Support setup.py publish."""
 
     description = 'Build and publish the package.'
-    user_options = []  # type: List
+    user_options = []
 
     @staticmethod
     def status(s):
@@ -98,11 +101,12 @@ setup(
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     license='MIT',
-    py_modules=['feed_media_backup'],
+    package_dir={'': 'src'},
+    packages=['feed_media_backup'],
     install_requires=REQUIRES,
     entry_points='''
         [console_scripts]
-        feed_media_backup=feed_media_backup:main
+        feed_media_backup=feed_media_backup.cli:main
     ''',
     cmdclass={
         'publish': PublishCommand,
