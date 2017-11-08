@@ -4,17 +4,12 @@ Testing feed_media_backup
 
 """
 import os
-
 from unittest import mock
 
-from click.testing import CliRunner
-
 import feed_media_backup
-
 import pytest
-
+from click.testing import CliRunner
 from tinydb import TinyDB
-
 from youtube_dl.utils import DownloadError
 
 

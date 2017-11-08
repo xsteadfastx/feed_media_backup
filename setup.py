@@ -4,8 +4,8 @@ import os
 import re
 import sys
 from shutil import rmtree
-from setuptools import Command, setup
 
+from setuptools import Command, setup
 
 NAME = 'feed_media_backup'
 DESCRIPTION = 'Backups media from blog RSS feeds.'

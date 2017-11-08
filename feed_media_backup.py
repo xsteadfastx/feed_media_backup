@@ -4,28 +4,18 @@ feed_media_backup
 
 """
 import logging
-
 import os
-
 import sys
-
 from contextlib import contextmanager
-
 from typing import Generator, List
 
-from bs4 import BeautifulSoup
-
 import click
-
 import feedparser
-
 import logzero
-from logzero import logger
-
-from tinydb import Query, TinyDB
-
 import youtube_dl
-
+from bs4 import BeautifulSoup
+from logzero import logger
+from tinydb import Query, TinyDB
 
 __version__ = '0.0.1'
 
