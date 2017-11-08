@@ -1,4 +1,7 @@
 """feed_media_backup."""
+
+# pylint: disable=missing-docstring
+
 import ast
 import os
 import re

@@ -11,10 +11,9 @@ from typing import Generator, List
 
 import click
 import feedparser
-import logzero
 import youtube_dl
 from bs4 import BeautifulSoup
-from logzero import logger
+from logzero import logger, loglevel
 from tinydb import Query, TinyDB
 
 __version__ = '0.0.1'
@@ -89,9 +88,9 @@ def main(feed: str, dest: str, force: bool, verbose: bool) -> None:
     """Backups media from blog RSS feeds."""
     # set log level
     if verbose:
-        logzero.loglevel(logging.DEBUG)
+        loglevel(logging.DEBUG)
     else:
-        logzero.loglevel(logging.INFO)
+        loglevel(logging.INFO)
 
     # database init
     database = TinyDB(os.path.join(dest, 'db.json'))

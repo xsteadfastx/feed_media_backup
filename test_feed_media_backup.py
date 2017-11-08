@@ -300,7 +300,7 @@ def test_change_dir(tmpdir):
 
     ]
 )
-@mock.patch('feed_media_backup.logzero')
+@mock.patch('feed_media_backup.loglevel')
 @mock.patch('feed_media_backup.logger')
 @mock.patch('feed_media_backup.download')
 @mock.patch('feed_media_backup.TinyDB')
@@ -308,7 +308,7 @@ def test_main(
         patch_tinydb,
         patch_download,
         patch_logger,
-        patch_logzero,
+        patch_loglevel,
         force,
         verbose,
         db_prefill,
@@ -376,4 +376,4 @@ def test_main(
         loglevel = 10
     else:
         loglevel = 20
-    patch_logzero.loglevel.assert_called_with(loglevel)
+    patch_loglevel.assert_called_with(loglevel)
