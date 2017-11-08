@@ -6,11 +6,13 @@ Testing feed_media_backup
 import os
 from unittest import mock
 
-import feed_media_backup
 import pytest
 from click.testing import CliRunner
 from tinydb import TinyDB
 from youtube_dl.utils import DownloadError
+
+import feed_media_backup
+from feed_media_backup.utils import get_urls
 
 
 @pytest.mark.parametrize('inputstr,expected', [
@@ -23,13 +25,13 @@ from youtube_dl.utils import DownloadError
 ])
 def test_get_urls(inputstr, expected):
     """Testing get_urls function."""
-    assert feed_media_backup.get_urls(inputstr) == expected
+    assert get_urls(inputstr) == expected
 
 
-@mock.patch('feed_media_backup.youtube_dl.YoutubeDL', autospec=True)
+@mock.patch('feed_media_backup.utils.youtube_dl.YoutubeDL', autospec=True)
 def test_download(patch_ydl, tmpdir):
     """Testing download function."""
-    feed_media_backup.download('http://foo.bar', tmpdir.strpath)
+    feed_media_backup.utils.download('http://foo.bar', tmpdir.strpath)
 
     patch_ydl.return_value.__enter__.return_value.download.assert_called_with(
         ['http://foo.bar']
@@ -41,14 +43,14 @@ def test_download(patch_ydl, tmpdir):
     (IndexError('foo'), False),
     (KeyboardInterrupt('foo'), None)
 ])
-@mock.patch('feed_media_backup.sys', autospec=True)
-@mock.patch('feed_media_backup.youtube_dl.YoutubeDL', autospec=True)
+@mock.patch('feed_media_backup.utils.sys', autospec=True)
+@mock.patch('feed_media_backup.utils.youtube_dl.YoutubeDL', autospec=True)
 def test_download_except(patch_ydl, patch_sys, exception, expected, tmpdir):
     """Testing download function throwing exception."""
     patch_ydl.return_value.__enter__.return_value.download.side_effect = \
         exception
 
-    assert feed_media_backup.download(
+    assert feed_media_backup.utils.download(
         'http://foo.bar',
         tmpdir.strpath
     ) is expected
@@ -64,7 +66,7 @@ def test_change_dir(tmpdir):
 
     assert os.getcwd() == tmpdir.strpath
 
-    with feed_media_backup.change_dir(tmpdir.join('foo').strpath):
+    with feed_media_backup.utils.change_dir(tmpdir.join('foo').strpath):
         assert os.getcwd() == tmpdir.join('foo').strpath
 
     assert os.getcwd() == tmpdir.strpath
@@ -157,7 +159,7 @@ def test_change_dir(tmpdir):
             [
                 mock.call(
                     'extract links...'
-                    ),
+                ),
                 mock.call(
                     'start to download article media...'
                 ),
@@ -276,7 +278,7 @@ def test_change_dir(tmpdir):
             [
                 mock.call(
                     'extract links...'
-                    ),
+                ),
                 mock.call(
                     'start to download article media...'
                 ),
@@ -300,10 +302,10 @@ def test_change_dir(tmpdir):
 
     ]
 )
-@mock.patch('feed_media_backup.loglevel')
-@mock.patch('feed_media_backup.logger')
-@mock.patch('feed_media_backup.download')
-@mock.patch('feed_media_backup.TinyDB')
+@mock.patch('feed_media_backup.cli.loglevel')
+@mock.patch('feed_media_backup.utils.logger')
+@mock.patch('feed_media_backup.cli.download')
+@mock.patch('feed_media_backup.cli.TinyDB')
 def test_main(
         patch_tinydb,
         patch_download,
@@ -352,7 +354,7 @@ def test_main(
         arg_opts.append('-f')
 
     result = runner.invoke(
-        feed_media_backup.main,
+        feed_media_backup.cli.main,
         arg_opts
     )
 

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bd12afff47129ed1bc3c3087835d9dc647f658c7b25fd4b043e5533b50091c8d"
+            "sha256": "3a4161d30d6f654e8a48cb8ac2f0551b108964c328a4e83143ba394734fdefe8"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -322,12 +322,11 @@
             ],
             "version": "==3.2.3"
         },
-        "pytest-cov": {
+        "pytest-sugar": {
             "hashes": [
-                "sha256:890fe5565400902b0c78b5357004aab1c814115894f4f21370e2433256a3eeec",
-                "sha256:03aa752cf11db41d281ea1d807d954c4eda35cfa1b21d6971966cc041bbf6e2d"
+                "sha256:8f1aca70235559f95abe2d7508a029d933e9c9961888d74d423e6460678a9686"
             ],
-            "version": "==2.5.1"
+            "version": "==0.9.0"
         },
         "requests": {
             "hashes": [
@@ -349,6 +348,12 @@
                 "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
             ],
             "version": "==1.11.0"
+        },
+        "termcolor": {
+            "hashes": [
+                "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"
+            ],
+            "version": "==1.1.0"
         },
         "tox": {
             "hashes": [
