@@ -1,4 +1,4 @@
-.PHONY: init clean docker-build
+.PHONY: init clean docker-build publish
 
 init:
 	pipenv --three
@@ -14,3 +14,6 @@ clean:
 
 docker-build: clean
 	docker build -t feed_media_backup .
+
+publish: clean
+	pipenv run python setup.py publish
