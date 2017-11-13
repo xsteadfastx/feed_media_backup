@@ -41,7 +41,8 @@ deploy:
   provider: releases
   api_key:
     secure: I+tN9bq19qVU2YgSdjWN6HekKo11FsHQ/iVoTs0YMYYkOcN9+a9V6pMYKH0GFvxuGXOPf3BWlEvV8IBMSg0OvYmaN0e4fizO2bzzE9q27/nSn4yAvpWeKRVHmvC768U5Q7KB8rVLrmLK0wUjPi41MNf/K/sZSluCHrWprXXlqu7wGaPMcld3jKIFtCnrIDDKz8deCaxTBasDhOd3HEObl89xWHFir/SFl3huKFaQ4gKss0XZP+lmPW/8N4hfVsEbrEnf/eZYUNJnYfLe/SYAFqFLOxuiqbD7G6crxj5i+XamFzH4MCvhVJFXt5oIc8abD/zEf3jv1Pz0pPYu3QYCJSpE+8xLbrtWB3gLBu+i5zwrDZ0nmYdbhu45gelLjOTWMLALtqtC1WeO7WwF/lEQ0atiWGtwOFhvSxocIGxuVRuV0l8rvM0bBhxZpT056Y6DuYp6ERGSR8O/JACqHUcwF1ZxDH7I1EYWXn6xBDb8GUo4OENreQ05FOn6ypDsvRdpm1mb6iBM9JM/JZxmrO/VefqZIzmpxcQK8aXD70NdgCtnRG80g9F6b5dDUlzQmyh+M1s1DESVgVF/3yhbAdD3E4IwB89dpKLybIjvWkyuVekM11iYoLk6YRBfrJoXUqG1o8gRCuR/w8m7nuNecpZKBhC/RUUGvuVf8arwZS59gZQ=
-  file: dist/feed_media_backup.pex
+  file_glob: true
+  file: dist/feed_media_backup-*.pex
   skip_cleanup: true
   on:
     tags: true

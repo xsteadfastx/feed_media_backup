@@ -9,4 +9,4 @@ RUN set -ex \
 
 WORKDIR /data
 
-CMD pex -e feed_media_backup.cli:main --python=python3.6 --python=python3.5 --python=python3.4 --python-shebang=/usr/bin/python3 -o dist/feed_media_backup.pex --no-wheel --disable-cache -v .
+CMD pex -e feed_media_backup.cli:main --python=python3.6 --python=python3.5 --python=python3.4 --python-shebang=/usr/bin/python3 -o dist/feed_media_backup-`uname -s`-`uname -m`.pex --no-wheel --disable-cache -v .

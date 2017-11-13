@@ -31,7 +31,7 @@ Install
 
 There are a few options to install `feed_media_backup`:
 
-1. `wget https://github.com/xsteadfastx/feed_media_backup/archive/feed_media_backup.pex -O feed_media_backup`
+1. `wget https://github.com/xsteadfastx/feed_media_backup/archive/feed_media_backup-`uname -s`-`uname -m`.pex -O feed_media_backup`
 2. `pip install feed_media_backup`
 3. `pip install git+https://github.com/xsteadfastx/feed_media_backup#egg=feed_media_backup`
 4. `git clone https://github.com/xsteadfastx/feed_media_backup.git && cd feed_media_backup && pipenv --three && pipenv install && pipenv run pip install -e .`
